@@ -1,11 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-
-const inter = Inter({ subsets: ['latin'] })
+import { lora } from '@/utils/fonts'
+import profilePic from 'public/images/personal/profile.jpg'
 
 export default function Home() {
 	return (
@@ -16,16 +13,21 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<h1>
-				Julie Pariona Osco
-			</h1>
-			<h2>
-				Développeuse web junior
-			</h2>
-			<p>
-				Plus de 2 ans après mes premières lignes de code, mon goût pour la programmation web n&lsquo;a fait que grandir. Pour moi, c&lsquo;est un moyen de continuer à découvrir de nouvelles technologies, de nouvelles façons de faire et dans un sens de me challenger.
-				Je souhaite rejoindre une entreprise et une équipe dans lesquelles je pourrai valoriser mes compétences techniques et mon éthique de travail pour mener à bien des projets variés et stimulants.
-			</p>
+			<section className={ styles.home }>
+				<div className={ styles.home_hero }>
+					<div className={ styles.home_titles }>
+						<h1 className={ lora.className }>
+							<span>Julie</span>
+							<span>Pariona</span>
+							<span>Osco</span>
+						</h1>
+						<h2 className={ lora.className }>
+							Développeuse web
+						</h2>
+					</div>
+					<Image src={ profilePic } alt='photo' />
+				</div>
+			</section>
 		</>
 	)
 }
