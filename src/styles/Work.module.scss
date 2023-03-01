@@ -1,0 +1,14 @@
+@import './Variables.module.scss';
+
+.work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .work_title {
+        display: grid;
+        place-content: center;
+        gap: 12px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}

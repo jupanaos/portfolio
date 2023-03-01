@@ -1,27 +1,35 @@
 import Head from "next/head"
-import Navbar from "@/components/Navbar"
 import Project from "@/components/Project"
-import Footer from "@/components/Footer"
-import { useState } from "react"
+import styles from '@/styles/Work.module.scss'
+import PageTitle from "@/components/PageTitle"
 
 export default function Work({ projects }) {
     return (
         <>
             <Head>
-                <title>Julie Pariona Osco - A propos</title>
+                <title>Julie Pariona Osco - Projets</title>
                 <meta name="description" content="Développeur web fullstack basée en France. Skills: PHP, Symfony, JavaScript, Next.js" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-                <h1>
-                    Mes projets
-                </h1>
-                {projects.map((project, i) => 
-                    <Project
-                        key={ i }
-                        project={ project }
+            <section className={ styles.work }>
+                <div className={ styles.work_title }>
+                    <PageTitle
+                        title = "Mes projets"
+                        subtitle="Des projets qu'ils sont beaux ! J'apporte une attention particulière à la documentation et à la propreté du code (même s'il doit rester quelques coquilles &#128579;)."
                     />
-                )}
+                </div>
+
+                <div className="work_projects">
+                    {projects.map((project, i) => 
+                        <Project
+                            key={ i }
+                            project={ project }
+                        />
+                    )}
+                </div>
+
+            </section>
         </>
     )
 }

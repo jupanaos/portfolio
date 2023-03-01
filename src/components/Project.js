@@ -4,10 +4,12 @@ const Project = ({project}) => {
     return (
         <div>
             <h3>{ project.title }</h3>
+            <p>{ project.tag }</p>
             <p>{ project.description }</p>
+            <p>{project.stacks}</p>
             <Image
                 src={project.image}
-                alt="Picture of the author"
+                alt="Illustration du projet"
                 width={500}
             />
             <a href={project.url}>Site</a>
