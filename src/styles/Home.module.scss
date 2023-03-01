@@ -15,9 +15,10 @@
             position: absolute;
             z-index: 2;
             bottom: 0;
-            right: 66%;
+            right: 76%;
+            color: #636580;
             h1{
-                font-size: 125px;
+                font-size: 7.8rem;
                 display: flex;
                 flex-direction: column;
                 line-height: 6rem;
@@ -32,6 +33,10 @@
                 font-weight: 400;
                 text-align: right;
             }
+        }
+        img {
+            height: auto;
+            width: 205px;
         }
     }
 }

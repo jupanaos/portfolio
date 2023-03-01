@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { lora } from '@/utils/fonts'
-import profilePic from 'public/images/personal/profile.jpg'
+import profilePic from 'public/images/personal/profile-pic.png'
 
 export default function Home() {
 	return (
