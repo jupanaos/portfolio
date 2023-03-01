@@ -1,0 +1,9 @@
+@import '../Variables.module.scss';
+
+.navbar {
+    display: flex;
+    gap: 8rem;
+    justify-content: flex-end;
+    height: $header-height;
+    align-items: center;
+}
