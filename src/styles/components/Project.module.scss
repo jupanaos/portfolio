@@ -1,0 +1,31 @@
+.project_item {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+    .project_content {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 12px 0px 12px;
+        .project_header {
+            padding-bottom: 1.5rem;
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                font-weight: 600;
+            }
+        }
+        .project_description {
+            text-align: justify;
+            max-width: 550px;
+            line-height: 1.5rem;
+        }
+        .project_links {
+            display: flex;
+            justify-content: right;
+            gap: 3rem;
+        }
+    }
+}
+
+

@@ -2,13 +2,15 @@
 
 .work {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 8rem;
     .work_title {
         display: grid;
         place-content: center;
-        gap: 12px;
+        gap: 25px;
         position: sticky;
         top: 0;
         height: 100vh;
+        margin-top: - $header-height;
     }
 }

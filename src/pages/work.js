@@ -20,8 +20,8 @@ export default function Work({ projects }) {
                     />
                 </div>
 
-                <div className="work_projects">
-                    {projects.map((project, i) => 
+                <div className={ styles.work_projects }>
+                    {projects.slice(0).reverse().map((project, i) => 
                         <Project
                             key={ i }
                             project={ project }
