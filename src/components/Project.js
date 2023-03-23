@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '@/styles/components/Project.module.scss';
 
-const Project = ({project}) => {
+const Project = ({ project }) => {
     return (
         <div className={ styles.project_item }>
             <Image
@@ -15,11 +15,35 @@ const Project = ({project}) => {
                     <p>{ project.tag }</p>
                 </div>
                 <p className={ styles.project_description }>{ project.description }</p>
-                <p>{ project.stacks }</p>
+                <div className={ styles.project_stacks }>
+                    <div className={ styles.project_stacks_container }>
+                        <ul>
+                            {project.stacks.map((stack, i) => (
+                                <li key={i}>
+                                    { stack }
+                                </li>
+                            ))}
+                        </ul>
+                        <ul>
+                            {project.stacks.map((stack, i) => (
+                                <li key={i}>
+                                    { stack }
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                    {/* {project.stacks.map((stack, i) =>
+                    <DevIcon
+                        key={ i }
+                        stack={ stack }
+                        icon={`${stack}`}
+                        viewBox="0 0 32 32"
+                    />
+                    )} */}
                 <div className={ styles.project_links }>
                     <a href={ project.url }>Site</a>
                     <a href={ project.github }>Github</a>
-                    <i className="devicon-sass-original"></i>
                 </div>
             </div>
         </div>
