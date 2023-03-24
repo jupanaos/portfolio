@@ -49,7 +49,7 @@ const projectsData = [
   {
     id: 5,
     title: "To Do & Co",
-    description: "L'entreprise To Do & Co souhaitait un audit et une amélioration de son application de to-do list réalisée en Symfony 3.4. Mon travail a été de réaliser un audit de performance, faire une mise à niveau vers Symfony 5.4, améliorer et ajouter des fonctionnalités, ainsi qu'implémenter des tests unitaires et fonctionnels avec PHPUnit.",
+    description: "L'entreprise To Do & Co souhaitait un audit et une amélioration de son application de to-do list réalisée en Symfony 3.4. Mon travail a été de rédiger un audit de performance, faire une mise à niveau vers Symfony 5.4, améliorer et ajouter des fonctionnalités, ainsi qu'implémenter des tests unitaires et fonctionnels avec PHPUnit.",
     stacks: ['Symfony', 'MySQL', 'SASS'],
     tag: "Formation",
     image: todoco,
