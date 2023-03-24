@@ -1,4 +1,7 @@
+@import '../Variables.module.scss';
+
 .footer {
-    position: fixed;
-    bottom: 0;
+    padding: 4rem 0;
+    border-top: 1px solid $eerie-black;
+    margin-top: 4rem;
 }

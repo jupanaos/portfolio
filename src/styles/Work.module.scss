@@ -13,4 +13,9 @@
         height: 100vh;
         margin-top: - $header-height;
     }
+    .work_projects {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
