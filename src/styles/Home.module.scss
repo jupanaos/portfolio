@@ -11,6 +11,7 @@
         display: flex;
         justify-content: flex-end;
         height: fit-content;
+        align-items: center;
         .home_titles {
             position: absolute;
             z-index: 2;
@@ -37,6 +38,29 @@
         img {
             height: auto;
             width: 205px;
+        }
+        .home_textslide{
+            position: absolute;
+            z-index: -1;
+            transform: translateX(110%);
+            width: 300px;
+            h3{
+                display: flex;
+                flex-direction: column;
+                font-size: 2.5rem;
+                animation: slide 1.5s ease-out forwards;
+                transform:translateX(-100%);
+                opacity: 0;
+            }
+            @keyframes slide {
+                20% {
+                    opacity: 0;
+                }
+                100% {
+                    transform:translateX(0);
+                    opacity: 2;
+                }
+            }
         }
     }
 }

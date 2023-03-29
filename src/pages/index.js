@@ -25,7 +25,18 @@ export default function Home() {
 							Développeuse web
 						</h2>
 					</div>
-					<Image src={ profilePic } alt='photo' />
+					<div className={ styles.home_textslide}>
+						<h3>
+							<span>PHP/Symfony</span>
+							<span>API Platform</span>
+							<span>MySQL</span>
+							<span>JavaScript</span>
+							<span>CSS/SASS</span>
+						</h3>
+					</div>
+					<div>
+						<Image src={ profilePic } alt='photo' />
+					</div>
 				</div>
 			</section>
 		</>
