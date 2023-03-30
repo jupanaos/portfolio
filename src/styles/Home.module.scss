@@ -43,23 +43,34 @@
             position: absolute;
             z-index: -1;
             transform: translateX(110%);
-            width: 300px;
+            width: 500px;
             h3{
                 display: flex;
                 flex-direction: column;
-                font-size: 2.5rem;
-                animation: slide 1.5s ease-out forwards;
-                transform:translateX(-100%);
-                opacity: 0;
+                font-size: 2rem;
+                line-height: 2.5rem;
+                span {
+                    @for $i from 1 through 6 {
+                        &:nth-child(#{$i}n) {
+                          animation-delay: #{$i * 0.25}s;
+                        }
+                    }
+                    animation: slide 1.5s ease-out forwards;
+                    transform:translateX(-100%);
+                    opacity: 0;
+                }
             }
             @keyframes slide {
                 20% {
                     opacity: 0;
+                    color:rgb(200, 203, 255);
                 }
                 100% {
                     transform:translateX(0);
+                    color: #636580;
                     opacity: 2;
                 }
+                
             }
         }
     }
