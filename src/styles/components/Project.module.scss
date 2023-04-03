@@ -1,3 +1,5 @@
+@import '../Variables.module.scss';
+
 .project_item {
     display: flex;
     flex-direction: row;
@@ -6,10 +8,17 @@
     li {
         list-style: none;
     }
+    img {
+        display: block;
+        border-radius: 12px;
+        max-width: 400px;
+        height: auto;
+    }
     .project_content {
         display: flex;
         flex-direction: column;
         padding: 0px 12px 0px 12px;
+        max-width: 470px;
         .project_header {
             padding-bottom: 1.5rem;
             h3 {
@@ -21,7 +30,6 @@
         }
         .project_description {
             text-align: justify;
-            max-width: 550px;
             line-height: 1.5rem;
             font-size: 18px;
             margin-bottom: 1.5rem;
