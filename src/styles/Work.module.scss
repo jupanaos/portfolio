@@ -1,9 +1,19 @@
-@import './Variables.module.scss';
+@import './_variables.module.scss';
+@import './_breakpoints.scss';
 
 .work {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 8rem;
+    gap: clamp(2rem, -10rem + 18.75vw, 8rem);
+    @include md {
+        display: flex;
+        flex-direction: column;
+    }
+    ul {
+        @include md {
+            
+        }
+    }
     .work_title {
         display: grid;
         place-content: center;
@@ -12,10 +22,20 @@
         top: 0;
         height: 100vh;
         margin-top: - $header-height;
+        h2 {
+            font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
+            line-height: 30px;
+        }
+        @include md {
+            display: flex;
+            flex-direction: column;
+            position:unset;
+            height: 40vh;
+        }
     }
     .work_projects {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 4rem;
     }
 }

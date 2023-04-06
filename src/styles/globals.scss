@@ -1,4 +1,4 @@
-@import './Variables.module.scss';
+@import './_variables.module.scss';
 // @media (prefers-color-scheme: dark) {
   // :root {
     // --foreground-rgb: 255, 255, 255;
@@ -55,6 +55,7 @@ body {
   flex-direction: column;
   max-width: 1620px;
   margin: 0 auto;
+  padding: 0 clamp(2rem, -0.571rem + 2.68vw, 4rem);
 }
 
 a {
