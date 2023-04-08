@@ -1,9 +1,10 @@
 import Image from 'next/image'
-import styles from '@/styles/components/Project.module.scss';
+import styles from '@/styles/components/Project.module.scss'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const Project = ({ project }) => {
     return (
-        <div className={ styles.project_item }>
+        <li className={ styles.project_item }>
             <Image
                 src={project.image}
                 alt={`Illustration du projet ${project.title}`}
@@ -42,11 +43,11 @@ const Project = ({ project }) => {
                     />
                     )} */}
                 <div className={ styles.project_links }>
-                    <a href={ project.url }>Site</a>
-                    <a href={ project.github }>Github</a>
+                    <a href={ project.url }><FaExternalLinkAlt /> Site</a>
+                    <a href={ project.github }><FaGithub /> Github</a>
                 </div>
             </div>
-        </div>
+        </li>
     );
 }
 
