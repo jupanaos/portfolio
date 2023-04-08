@@ -1,0 +1,51 @@
+@import './_variables.module.scss';
+@import './breakpoints.scss';
+
+.about {
+    .about_title {
+        display: flex;
+        flex-direction: column;
+    }
+    .about_container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .about_content {
+            max-width: 1024px;
+            width: 100%;
+            padding: 0 4rem;
+            h2 {
+                font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
+                line-height: 30px;
+                margin-bottom: 1rem;
+            }
+            .about_text {
+                display: flex;
+                gap: clamp(1rem, -4rem + 6.25vw, 2rem);
+                p {
+                    max-width: 600px;
+                }
+                .about_links {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1.5rem 1rem;
+                    gap: 1rem;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    border-right: 1px solid $text;
+                    text-align: end;
+                }
+            }
+        }
+        .image_container {
+            max-width: 500px;
+            width: 100%;
+            img {
+                height: auto;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
