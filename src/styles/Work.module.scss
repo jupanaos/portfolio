@@ -17,20 +17,20 @@
     .work_title {
         display: grid;
         place-content: center;
-        gap: 25px;
         position: sticky;
         top: 0;
         height: 100vh;
         margin-top: - $header-height;
-        h2 {
-            font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
-            line-height: 30px;
-        }
         @include md {
             display: flex;
             flex-direction: column;
             position:unset;
-            height: 40vh;
+            height: auto;
+            margin: 4rem;
+        }
+        h2 {
+            font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
+            line-height: 30px;
         }
     }
     .work_projects {
