@@ -1,4 +1,5 @@
 @import '../_variables.module.scss';
+@import '../breakpoints.scss';
 
 .navbar {
     display: flex;
@@ -6,5 +7,12 @@
     justify-content: flex-end;
     height: $header-height;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    @include md {
+        justify-content: space-between;
+        gap: inherit;
+    }
+    @include sm {
+        font-size: clamp(1.2rem, 0.471rem + 2.82vw, 1.6rem);
+    }
 }
