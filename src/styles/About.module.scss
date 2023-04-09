@@ -9,11 +9,14 @@
     .about_container {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        @include md {
+            flex-direction: column;
+            gap: 2rem;
+        }
         .about_content {
             max-width: 1024px;
             width: 100%;
-            padding: 0 4rem;
+            padding: 0 clamp(1.5rem, -3.5rem + 7.81vw, 4rem);
             h2 {
                 font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
                 line-height: 30px;
@@ -22,8 +25,15 @@
             .about_text {
                 display: flex;
                 gap: clamp(1rem, -4rem + 6.25vw, 2rem);
+                justify-content: space-between;
+                align-items: center;
+                @include xl {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
                 p {
                     max-width: 600px;
+                    font-size: clamp(1rem, 1.56vw, 1.5rem);
                 }
                 .about_links {
                     display: flex;
@@ -34,12 +44,47 @@
                     font-weight: 600;
                     white-space: nowrap;
                     border-right: 1px solid $text;
-                    text-align: end;
+                    align-items: flex-end;
+                    @include xl {
+                        flex-direction: row;
+                        border-right: none;
+                        border-left: 1px solid $text;
+                    }
+                    @include sm {
+                        flex-direction: column;
+                        align-items: baseline;
+                    }
+                    a {
+                        display: flex;
+                        color: $primary-fade;
+                        position: relative;
+                        align-items: center;
+                        gap: 0.5rem;
+                        width: fit-content;
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            width: 0%;
+                            height: 1px;
+                            background-color: $primary-fade;
+                            transition: 0.4s;
+                        }
+                        &:hover {
+                            color: $primary;
+                            transition: 0.2s;
+                            &::after {
+                                width: 100%;
+                                background-color: $primary;
+                            }
+                        }
+                    }
                 }
             }
         }
         .image_container {
-            max-width: 500px;
+            max-width: 450px;
             width: 100%;
             img {
                 height: auto;

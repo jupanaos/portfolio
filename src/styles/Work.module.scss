@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: clamp(2rem, -10rem + 18.75vw, 8rem);
+    margin-top: clamp(2rem, -1rem + 6.25vw, 5rem);
     @include md {
         display: flex;
         flex-direction: column;
@@ -26,7 +27,7 @@
             flex-direction: column;
             position:unset;
             height: auto;
-            margin: 4rem;
+            margin: 4rem clamp(0rem, -20rem + 50vw, 4rem);
         }
         h2 {
             font-size: clamp(1.25rem, 0.625rem + 0.98vw, 1.563rem);
