@@ -34,17 +34,15 @@ const Project = ({ project }) => {
                         </ul>
                     </div>
                 </div>
-                    {/* {project.stacks.map((stack, i) =>
-                    <DevIcon
-                        key={ i }
-                        stack={ stack }
-                        icon={`${stack}`}
-                        viewBox="0 0 32 32"
-                    />
-                    )} */}
                 <div className={ styles.project_links }>
-                    <a href={ project.url }><FaExternalLinkAlt /> Site</a>
-                    <a href={ project.github }><FaGithub /> Github</a>
+                    <a alt={`Visiter le site de ${project.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={ project.url }><FaExternalLinkAlt /> Site</a>
+                    <a alt={`Visiter le Github de ${project.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={ project.github }><FaGithub /> Github</a>
                 </div>
             </div>
         </li>

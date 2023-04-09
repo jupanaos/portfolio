@@ -3,6 +3,7 @@ import PageTitle from "@/components/PageTitle"
 import Image from "next/image"
 import aboutPic from "public/images/personal/about_pic.jpg"
 import styles from '@/styles/About.module.scss'
+import { FaEye, FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa'
 
 export default function About() {
     return (
@@ -27,9 +28,9 @@ export default function About() {
                         <h2>Je suis une développeuse web curieuse et avide de connaissance.</h2>
                         <div className={ styles.about_text }>
                             <p>
-                                J&rsquo;ai découvert la programmation au détour de mes études en design graphique (en codant une simple page en HTML et CSS !).<br/>
-                                Presque 3 ans après ma première piscine en PHP et une dizaine de projets, mon goût pour la programmation web n&rsquo;a fait que grandir. Pour moi, c&rsquo;est un moyen de continuer à découvrir de nouvelles technologies, de nouvelles façons de faire et dans un sens de me challenger.
-                                Je souhaite à présent rejoindre une équipe bienveillante dans laquelle je pourrai investir mes compétences, mon éthique de travail et continuer à évoluer.
+                                J&rsquo;ai découvert la programmation au détour de mes études en design graphique (en codant une simple page en HTML et CSS&nbsp;!).<br/>
+                                Presque 3 ans après ma première piscine en PHP et une dizaine de projets, mon goût pour le développement web n&rsquo;a fait que grandir. Pour moi, c&rsquo;est un moyen de continuer à découvrir de nouvelles technologies, de nouvelles façons de faire et dans un sens de me challenger.
+                                Je souhaite à présent rejoindre une équipe bienveillante dans laquelle je pourrai investir mes compétences et mon éthique de travail. Je cherche à évoluer en tant que développeuse Symfony, mais aussi sur d&rsquo;autres technologies comme NodeJS.
                             </p>
                             <aside className={ styles.about_links }>
                                 <a
@@ -37,28 +38,28 @@ export default function About() {
                                     alt="CV développeur php Julie Pariona Osco"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >Mon CV</a>
+                                ><FaEye/> Mon CV</a>
 
                                 <a
                                     href="https://github.com/jupanaos"
                                     alt="Github"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >Github</a>
+                                ><FaGithub /> Github</a>
 
                                 <a
                                     href="https://www.linkedin.com/in/jupanaos/"
                                     alt="LinkedIn"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >LinkedIn</a>
+                                ><FaLinkedin/> LinkedIn</a>
 
                                 <a
                                     href="mailto:julie.pariona@gmail.com"
                                     alt="Email"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >On s&rsquo;écrit ?</a>
+                                ><FaRegEnvelope /> On s&rsquo;écrit ?</a>
                             </aside>
                         </div>
                     </div>
