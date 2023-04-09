@@ -16,18 +16,18 @@ export default function Work({ projects }) {
                 <div className={ styles.work_title }>
                     <PageTitle
                         title = "Mes projets"
-                        subtitle="Des projets qu'ils sont beaux ! J'apporte une attention particulière à la documentation et à la propreté du code."
+                        subtitle="Des projets qu'ils sont beaux&nbsp;! J'apporte une attention particulière à la documentation et à la propreté du code."
                     />
                 </div>
 
-                <div className={ styles.work_projects }>
+                <ul className={ styles.work_projects }>
                     {projects.slice(0).reverse().map((project, i) => 
                         <Project
                             key={ i }
                             project={ project }
                         />
                     )}
-                </div>
+                </ul>
 
             </section>
         </>

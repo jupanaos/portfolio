@@ -1,5 +1,9 @@
 import Head from "next/head"
 import PageTitle from "@/components/PageTitle"
+import Image from "next/image"
+import aboutPic from "public/images/personal/about_pic.jpg"
+import styles from '@/styles/About.module.scss'
+import { FaEye, FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa'
 
 export default function About() {
     return (
@@ -10,14 +14,56 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <section>
-                <PageTitle title = "&Agrave; propos"/>
-                <p>
-                    Je suis une développeuse web avide de connaissances.
-                    J&lsquo;ai découvert la programmation au détour de mes études en design graphique. 
-                    Plus de 2 ans après mes premières lignes de code, mon goût pour la programmation web n&lsquo;a fait que grandir. Pour moi, c&lsquo;est un moyen de continuer à découvrir de nouvelles technologies, de nouvelles façons de faire et dans un sens de me challenger.
-				    Je souhaite rejoindre une entreprise et une équipe dans lesquelles je pourrai valoriser mes compétences techniques et mon éthique de travail pour mener à bien des projets variés et stimulants.
-                </p>
+            <section className={ styles.about }>
+                <div className={ styles.about_title }>
+                    <PageTitle
+                        title = "&Agrave; propos"
+                    />
+                </div>
+                <div className={ styles.about_container }>
+                    <div className={ styles.image_container }>
+                        <Image src={ aboutPic } alt='photo' />
+                    </div>
+                    <div className={ styles.about_content }>
+                        <h2>Je suis une développeuse web curieuse et avide de connaissance.</h2>
+                        <div className={ styles.about_text }>
+                            <p>
+                                J&rsquo;ai découvert la programmation au détour de mes études en design graphique (en codant une simple page en HTML et CSS&nbsp;!).<br/>
+                                Presque 3 ans après ma première piscine en PHP et une dizaine de projets, mon goût pour le développement web n&rsquo;a fait que grandir. Pour moi, c&rsquo;est un moyen de continuer à découvrir de nouvelles technologies, de nouvelles façons de faire et dans un sens de me challenger.
+                                Je souhaite à présent rejoindre une équipe bienveillante dans laquelle je pourrai investir mes compétences et mon éthique de travail. Je cherche à évoluer en tant que développeuse Symfony, mais aussi sur d&rsquo;autres technologies comme NodeJS.
+                            </p>
+                            <aside className={ styles.about_links }>
+                                <a
+                                    href="/files/CV-JPARIONAOSCO-2023.pdf"
+                                    alt="CV développeur php Julie Pariona Osco"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                ><FaEye/> Mon CV</a>
+
+                                <a
+                                    href="https://github.com/jupanaos"
+                                    alt="Github"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                ><FaGithub /> Github</a>
+
+                                <a
+                                    href="https://www.linkedin.com/in/jupanaos/"
+                                    alt="LinkedIn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                ><FaLinkedin/> LinkedIn</a>
+
+                                <a
+                                    href="mailto:julie.pariona@gmail.com"
+                                    alt="Email"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                ><FaRegEnvelope /> On s&rsquo;écrit ?</a>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     )

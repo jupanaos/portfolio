@@ -1,47 +1,70 @@
+@import '../_variables.module.scss';
+@import '../_breakpoints.scss';
+
 .project_item {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    gap: clamp(1rem, -4rem + 6.25vw, 2rem);
     align-items: center;
+    @include lg {
+        flex-direction: column;
+    }
     li {
         list-style: none;
+    }
+    img {
+        display: block;
+        border-radius: 12px;
+        max-width: clamp(18.75rem, 6.25rem + 19.53vw, 25rem);
+        height: auto;
+        @include lg {
+            max-width: 500px;
+            width: 100%;
+        }
     }
     .project_content {
         display: flex;
         flex-direction: column;
         padding: 0px 12px 0px 12px;
+        max-width: clamp(21.875rem, 6.875rem + 23.44vw, 29.375rem);
+        @include lg {
+            max-width: 500px;
+            width: 100%;
+        }
         .project_header {
             padding-bottom: 1.5rem;
             h3 {
-                font-size: 2rem;
+                font-size: clamp(1.5rem, 1rem + 1.04vw, 2rem);
             }
             p {
                 font-weight: 600;
+                font-size: 1rem;
+                color: $text-dark;
             }
         }
         .project_description {
             text-align: justify;
-            max-width: 550px;
             line-height: 1.5rem;
-            font-size: 18px;
+            font-size: clamp(1.2rem, 0.875rem + 0.26vw, 1.5rem);
             margin-bottom: 1.5rem;
         }
         .project_stacks {
             display: block;
             padding: 0;
             overflow: hidden;
-            max-width: 640px;
+            max-width: 100%;
             height: 60px;
             .project_stacks_container {
                 position: relative;
                 width: 100%;
                 overflow-x: hidden !important;
                 display: flex;
+                gap: 2rem;
                 ul {
                     flex: 0 0 auto;
                     min-width: 100%;
                     display: flex;
                     justify-content: space-around;
+                    gap: 2rem;
                     animation: scroll 15s linear infinite;
                     animation-play-state: running;
                     animation-delay: 0s;
@@ -57,8 +80,25 @@
             display: flex;
             justify-content: right;
             gap: 3rem;
+            @include md {
+                justify-content: center;
+            }
+            a {
+                color: #ffffff;
+                background-color: $primary;
+                font-size: 17px;
+                border-radius: 50px;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+            }
+            a:hover {
+                color: $text;
+                background-color: $primary-fade;
+            }
         }
     }
 }
-
-

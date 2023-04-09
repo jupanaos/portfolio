@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { lora } from '@/utils/fonts'
 import profilePic from 'public/images/personal/profile-pic.png'
+import { FaHeart, FaCalendarCheck, FaSuitcaseRolling, FaRegHandPeace} from 'react-icons/fa'
 
 export default function Home() {
 	return (
@@ -25,7 +26,17 @@ export default function Home() {
 							Développeuse web
 						</h2>
 					</div>
-					<Image src={ profilePic } alt='photo' />
+					<div className={ styles.home_textslide}>
+						<h3>
+							<span><FaRegHandPeace/> Curieuse et enthousiaste</span>
+							<span><FaHeart /> PHP et Symfony</span>
+							<span><FaCalendarCheck /> Disponible dès que possible</span>
+							<span><FaSuitcaseRolling /> Mobile dans toute la France</span>
+						</h3>
+					</div>
+					<div>
+						<Image src={ profilePic } alt='photo' />
+					</div>
 				</div>
 			</section>
 		</>

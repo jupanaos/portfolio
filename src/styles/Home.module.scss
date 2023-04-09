@@ -1,27 +1,44 @@
-@import './Variables.module.scss';
+@import './_variables.module.scss';
+@import './breakpoints.scss';
 
 .home {
     height: calc(100vh - $header-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include md {
+        display: unset;
+    }
     .home_hero {
         position: relative;
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;
         height: fit-content;
+        align-items: center;
+        @include md {
+            position: unset;
+            z-index: unset;
+            right: unset;
+            flex-direction: column;
+            justify-content: unset;
+        }
         .home_titles {
             position: absolute;
             z-index: 2;
             bottom: 0;
             right: 76%;
-            color: #636580;
+            color: $primary;
+            @include md {
+                position: unset;
+                z-index: unset;
+                right: unset;
+            }
             h1{
-                font-size: 7.8rem;
+                font-size: clamp(4rem, 1.286rem + 6.79vw, 7.8rem);
                 display: flex;
                 flex-direction: column;
-                line-height: 6rem;
+                line-height: clamp(4rem, 0.857rem + 5.36vw, 6rem);
                 margin-bottom: 1rem;
                 text-transform: uppercase;
                 span:nth-child(3){
@@ -29,14 +46,61 @@
                 }
             }
             h2{
-                font-size: 42px;
+                font-size: clamp(1.875rem, 1.339rem + 1.34vw, 2.625rem);
                 font-weight: 400;
                 text-align: right;
             }
         }
         img {
             height: auto;
-            width: 205px;
+            width: clamp(9.375rem, 5.938rem + 7.16vw, 12.813rem);
+            @include md {
+                display: none;
+            }
+        }
+        .home_textslide{
+            position: absolute;
+            z-index: -1;
+            transform: translateX(110%);
+            width: clamp(18.125rem, 5rem + 27.34vw, 31.25rem);
+            @include md {
+                position: unset;
+                z-index: unset;
+                transform: unset;
+                width: 500px;
+                padding-top: 3rem;
+            }
+            h3{
+                display: flex;
+                flex-direction: column;
+                font-size: clamp(1.5rem, 1.143rem + 0.89vw, 2rem);
+                line-height: 2.5rem;
+                @include md {
+                    align-items: center;
+                }
+                span {
+                    @for $i from 1 through 6 {
+                        &:nth-child(#{$i}n) {
+                          animation-delay: #{$i * 0.30}s;
+                        }
+                    }
+                    animation: slide 1.5s ease-out forwards;
+                    transform:translateX(-100%);
+                    opacity: 0;
+                }
+            }
+            @keyframes slide {
+                20% {
+                    opacity: 0;
+                    color:rgb(200, 203, 255);
+                }
+                100% {
+                    transform:translateX(0);
+                    color: $primary;
+                    opacity: 2;
+                }
+                
+            }
         }
     }
 }
