@@ -16,7 +16,7 @@ export default function Work({ projects }) {
                 <div className={ styles.work_title }>
                     <PageTitle
                         title = "Mes projets"
-                        subtitle="Des projets qu'ils sont beaux ! J'apporte une attention particulière à la documentation et à la propreté du code."
+                        subtitle="Des projets qu'ils sont beaux&nbsp;! J'apporte une attention particulière à la documentation et à la propreté du code."
                     />
                 </div>
 
